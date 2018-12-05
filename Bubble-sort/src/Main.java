@@ -1,35 +1,37 @@
 
 public class Main {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
+		boolean flag = false;
+		// int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
+		// int[] intArray = { 1,2,3,4,5,6,7 };
+		// int[] intArray = { 7,6,5,4,3,2,1 };
+		int[] intArray = { 1, 2, 3, 4, 7, 6, 5 };
+		int count = 1;
 
-        for (int lastUnsortedIndex = intArray.length - 1; lastUnsortedIndex > 0;
-                lastUnsortedIndex--) {
-            for (int i = 0; i < lastUnsortedIndex; i++) {
-                if (intArray[i] > intArray[i + 1]) {
-                    swap(intArray, i, i + 1);
-                }
-            }
-        }
+		for (int j = 1; j <= intArray.length; j++) {
+			for (int i = 0; i < intArray.length - j; i++) {
+				count++;
+				flag = true;
+				if (intArray[i] > intArray[i + 1]) {
 
-        for (int i = 0; i < intArray.length; i++) {
-            System.out.println(intArray[i]);
-        }
+					int temp = intArray[i];
+					intArray[i] = intArray[i + 1];
+					intArray[i + 1] = temp;
+					flag = false;
+				}
+			}
+			if (flag)
+				break;
 
+		}
+		for (int i = 0; i < intArray.length; i++) {
+			System.out.println(intArray[i]);
+		}
 
-    }
+		System.out.println("Count=" + count);
 
-    public static void swap(int[] array, int i, int j) {
+	}
 
-        if (i == j) {
-            return;
-        }
-
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-
-    }
 }
