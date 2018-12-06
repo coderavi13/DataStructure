@@ -12,7 +12,6 @@ public class SelectionSort {
 		int j;
 		int swapCount = 0;
 		int indexOfLargest;
-		boolean isSorted = false;
 		
 		for (int i = 0; i < intArray.length; i++) {
 			
@@ -20,7 +19,6 @@ public class SelectionSort {
 			
 			for (j = 1; j < intArray.length - i; j++) {
 
-				isSorted = true;
 				
 				if (intArray[indexOfLargest] < intArray[j]) {
 					indexOfLargest = j;
@@ -36,12 +34,9 @@ public class SelectionSort {
 				intArray[j] = temp;
 				
 				swapCount++;
-				isSorted = false;
-			}
-
-			if (isSorted)
-				break;
+			}	
 		}
+	
 		for (int element : intArray) {
 			System.out.print(" " + element + " ");
 		}
