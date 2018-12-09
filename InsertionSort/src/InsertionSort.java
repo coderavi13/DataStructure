@@ -2,13 +2,11 @@
 public class InsertionSort {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// int[] intArray= {1,2,3,4,5,6,7};
-		// int[] intArray = { 7, 6, 5, 4, 3, 2, 1 };
 		// int[] intArray = { 1, 2, 3, 4, 5, 6, 5 };
 		// int[] intArray = { 8, 7, 6, 1, 2, 3, 4 };
-
-		int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
+		// int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
+		int[] intArray = { 7, 6, 5, 4, 3, 2, 1 };
 
 		int pivot;
 
