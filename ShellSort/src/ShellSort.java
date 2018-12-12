@@ -8,6 +8,10 @@ public class ShellSort {
 		// int[] intArray = { 8, 7, 6, 1, 2, 3, 4 };
 		// int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
 		int[] intArray = { 7, 6, 5, 4, 3, 2, 1 };
+		System.out.println("Array Before Sort :");
+		for (int k : intArray) {
+			System.out.print(" " + k + " ");
+		}
 		int count = 0;
 		int tempElement;
 		for (int gap = intArray.length / 2; gap > 0; gap /= 2) {
@@ -23,10 +27,11 @@ public class ShellSort {
 				intArray[j] = tempElement;
 			}
 		}
+		System.out.println("\nArray after Sort :");
 		for (int k : intArray) {
 			System.out.print(" " + k + " ");
 		}
-		System.out.println("Count of shifting : " + count);
+		System.out.println("\nNumber of shifting : " + count);
 	}
 
 }
