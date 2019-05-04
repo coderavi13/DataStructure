@@ -11,7 +11,7 @@ public class QuickSort {
 		for (int i = 0; i < intArray.length; i++) {
 			System.out.print(" " + intArray[i] + " ");
 		}
-		sort(intArray, 0, intArray.length);
+		sort(intArray, 0, intArray.length-1);
 
 		System.out.println("\nAfter Sort :");
 		for (int i = 0; i < intArray.length; i++) {
