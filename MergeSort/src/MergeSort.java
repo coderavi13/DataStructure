@@ -3,8 +3,8 @@ public class MergeSort {
 		// int[] intArray= {1,2,3,4,5,6,7};
 		// int[] intArray = { 1, 2, 3, 4, 5, 6, 5 };
 		// int[] intArray = { 8, 7, 6, 1, 2, 3, 4 };
-		// int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
-		int[] intArray = { 7, 6, 5, 4, 3, 2, 1 };
+		 int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
+		//int[] intArray = { 7, 6, 5, 4, 3, 2, 1 };
 
 		mergeSort(intArray, 0, intArray.length);
 
@@ -20,8 +20,8 @@ public class MergeSort {
 		}
 
 		int mid = (start + end) / 2;
-		mergeSort(input, start, mid);
-		mergeSort(input, mid, end);
+		mergeSort(input, start, mid);    //left mergeSort
+		mergeSort(input, mid, end);        //Right mergeSort
 		merge(input, start, mid, end);
 
 	}
